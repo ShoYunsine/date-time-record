@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+  <link rel="stylesheet" type="text/css" href="css/login-signup-style.css">
+  <link rel="stylesheet" type="text/css" href="css/calendar.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
+  <link rel="shortcut icon" href="Images/logo.png">
+  <link rel="icon" type="image/png" href="Images/logo.png" />
+  <title>Daily-Time-Record | Dashboard</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jacquard+24&display=swap" rel="stylesheet">
+
+<body>
+  <div id="logincontainer">
+    <div class="form-container sign-up-container">
+      <form id="loginForm">
+        <h1>Login</h1>
+        <input type="text" id="loginEmail" placeholder="Email or Number" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <div>Don't have one? <a id="signUpButton" href="#">Create one</a></div>
+        <button type="submit" id="loginsubmit">Continue</button>
+        <div>or</div>
+        <button type="button" id="loginWithGoogle"><img src="Images/google-logo.png"></img> Continue with
+          Google</button>
+      </form>
+    </div>
+  </div>
+  <div id="signUpcontainer">
+    <div class="form-container sign-up-container">
+      <form id="signUpForm">
+        <h1>Sign Up</h1>
+        <input type="text" id="signUpEmail" placeholder="Email or Number" required>
+        <input type="password" id="signUpPassword" placeholder="Password" required>
+        <input type="password" id="signUpPasswordConfirm" placeholder="Confirm Password" required>
+        <div id="warning"><img src="Images/orange-warning-icon.png"></img><a id="warningtxt">Passwords do not match</a>
+        </div>
+        <div>Already have one? <a id="loginButton2" href="#">Login</a></div>
+        <button id="submitsignUp" type="submit">Sign Up</button>
+        <div>or</div>
+        <button type="button" id="signUpWithGoogle"><img src="Images/google-logo.png"></img> Continue with
+          Google</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="top-bar">
+    <div class="logo">
+      <a>DTR</a><img src="Images/logo.png"><a>Dashboard</a></img>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#faq">FAQ</a>
+      <a href="classes.html">Classes</a>
+      <a href="#contact">Contact</a>
+      <a id="account">Account</a>
+    </div>
+  </div>
+  <div id="accountDetails">
+    <div id="bg"><img id="accountImg" src="Images/gear.png"></img></div>
+    <div id="accountName">Not currently logged in</div>
+    <div id="accountEmail">·</div>
+    <button id="dashboard" href="dashboard.html">Dashboard</button>
+    <button id="loginButton">Login</button>
+    <button id="signOutButton">Sign Out</button>
+  </div>
+  <div class="container">
+    <div id="tabs">
+      <a href="#tab1" class="active">Attendance</a>
+      <a href="#tab2">Account</a>
+    </div>
+    <div id="tabs-content">
+      <div id="tab1" class="tab-content">
+        <div class="wrapper">
+          <div class="container-calendar">
+            <div id="left">
+              <h1>Attendance</h1>
+              <div id="summary-section">
+                <h3>Summary</h3>
+                <div><b>Status</b>
+                  <div id="status"></div>
+                </div>
+                <div><b>Time In Today</b>
+                  <div id="time-in">00:00</div>
+                </div>
+                <div><b>Time Out Today</b>
+                  <div id="time-out">00:00</div>
+                </div>
+                <div><b>Days Absent</b>
+                  <div id="absent-days">0</div>
+                </div>
+                <div><b>Days Present</b>
+                  <div id="present-days">0</div>
+                </div>
+                <div><b>Days Late</b>
+                  <div id="late-days">0</div>
+                </div>
+                <div><b>Days Excused</b>
+                  <div id="excused-days">0</div>
+                </div>
+              </div>
+              <div id="event-section">
+                <h3>Add Event</h3>
+                <input type="date" id="eventDate">
+                <input type="text" id="eventTitle" placeholder="Event Title">
+                <input type="text" id="eventDescription" placeholder="Event Description">
+                <button id="addEvent" onclick="addEvent()">
+                  Add
+                </button>
+              </div>
+              <div id="reminder-section">
+                <h3>Reminders</h3>
+                <!-- List to display reminders -->
+                <ul id="reminderList">
+                  <li data-event-id="1">
+                    <strong>Event Title</strong>
+                    - Event Description on Event Date
+                    <button class="delete-event" onclick="deleteEvent(1)">
+                      Delete
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="right">
+              <h3 id="monthAndYear"></h3>
+              <div class="button-container-calendar">
+                <button id="previous" onclick="previous()">
+                  ‹
+                </button>
+                <button id="next" onclick="next()">
+                  ›
+                </button>
+              </div>
+              <table class="table-calendar" id="calendar" data-lang="en">
+                <thead id="thead-month"></thead>
+                <!-- Table body for displaying the calendar -->
+                <tbody id="calendar-body"></tbody>
+              </table>
+              <div class="footer-container-calendar">
+                <label for="month">Jump To: </label>
+                <!-- Dropdowns to select a specific month and year -->
+                <select id="month" onchange="jump()">
+                  <option value=0>Jan</option>
+                  <option value=1>Feb</option>
+                  <option value=2>Mar</option>
+                  <option value=3>Apr</option>
+                  <option value=4>May</option>
+                  <option value=5>Jun</option>
+                  <option value=6>Jul</option>
+                  <option value=7>Aug</option>
+                  <option value=8>Sep</option>
+                  <option value=9>Oct</option>
+                  <option value=10>Nov</option>
+                  <option value=11>Dec</option>
+                </select>
+                <!-- Dropdown to select a specific year -->
+                <select id="year" onchange="jump()"></select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tab2" class="tab-content">
+        <div class="wrapper">
+          <div class="container-calendar">
+            <div id="left">
+              <h1>Account</h1>
+              <div id="details-section">
+                <h3>
+                  Details
+                </h3>
+                <div><b>Name</b>
+                  <div id="name">--</div>
+                </div>
+                <div><b>Email</b>
+                  <div id="email">--</div>
+                </div>
+                <div><b>School</b>
+                  <div id="school" onclick="changeschool()">None</div>
+                  <select id="school-select" onchange="schoolselected()">
+                    <option value="None">None</option>
+                    <option value="Sorsogon State University, Main Campus">Sorsogon State University, Main Campus
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div id="qrcode-section">
+                <h3>
+                  QR Code
+                </h3>
+                <canvas id="qrcode"></canvas>
+                <button id="downloadQRCode">Save QR Code</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="js/login.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script type="text/javascript">
+    on_dash = true;
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/login-signup-style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
+  <link rel="shortcut icon" href="Images/logo.png">
+  <link rel="icon" type="image/png" href="Images/logo.png" />
+  <title>Daily-Time-Record | Home</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jacquard+24&display=swap" rel="stylesheet">
+
+<body>
+  <div id="logincontainer">
+    <div class="form-container sign-up-container">
+      <form id="loginForm">
+        <h1>Login</h1>
+        <input type="text" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <div>Don't have one? <a id="signUpButton" href="#">Create one</a></div>
+        <button type="submit" id="loginsubmit">Continue</button>
+        <div>or</div>
+        <button type="button" id="loginWithGoogle"><img src="Images/google-logo.png"></img> Continue with
+          Google</button>
+      </form>
+    </div>
+  </div>
+  <div id="signUpcontainer">
+    <div class="form-container sign-up-container">
+      <form id="signUpForm">
+        <h1>Sign Up</h1>
+        <input type="text" id="signUpEmail" placeholder="Email" required>
+        <input type="password" id="signUpPassword" placeholder="Password" required>
+        <input type="password" id="signUpPasswordConfirm" placeholder="Confirm Password" required>
+        <div id="warning"><img src="Images/orange-warning-icon.png"></img><div id="warningtxt">Passwords do not match</div>
+        </div>
+        <div>Already have one? <a id="loginButton2" href="#">Login</a></div>
+        <button id="submitsignUp" type="submit">Sign Up</button>
+        <div>or</div>
+        <button type="button" id="signUpWithGoogle"><img src="Images/google-logo.png"></img> Continue with
+          Google</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="top-bar">
+    <div class="logo">
+      <a>DTR</a><img src="Images/logo.png"><a>Home</a></img>
+    </div>
+    <div class="nav-links">
+      <a href="#faq">FAQ</a>
+      <a href="classes.html">Classes</a>
+      <a href="#contact">Contact</a>
+      <a id="account">Account</a>
+    </div>
+  </div>
+  <div id="accountDetails">
+    <div id="bg"><img id="accountImg" src="Images/gear.png"></img></div>
+    <div id="accountName">Not currently logged in</div>
+    <div id="accountEmail">·</div>
+    <a href="dashboard.html" id="dashboard">Dashboard</a>
+    <button id="loginButton">Login</button>
+    <button id="signOutButton">Sign Out</button>
+  </div>
+  <main>
+    <section id="home">
+        <h1>Welcome to Daily Time Record</h1>
+        <p>Your one-stop solution for recording and checking class attendance effortlessly.</p>
+        <p>Keep track of your attendance with our easy-to-use platform.</p>
+        <button><b>Start Tracking ></b></button>
+    </section>
+    <section id="offers" class="offers-section">
+      <h2>What We Offer</h2>
+      <div class="offers-container">
+          <div class="offer-item">
+              <h3>Free to Use</h3>
+              <p><b>"Enjoy our software at no cost!"</b></p>
+                <p>Access all our features and tools without any fees or subscriptions. 
+                Experience the full benefits of our platform without any financial commitment. 
+                Join us today and start using our software for free!</p>
+          </div>
+          <div class="offer-item">
+              <h3>Offline Use</h3>
+              <p><b>"Access our services even when you're offline!"</b></p> 
+                <p>Utilize our offline tools without the need for an internet connection. 
+                Perfect for when you're on the go or in areas with limited connectivity. 
+                Stay productive anytime, anywhere.</p>
+          </div>
+      </div>
+  </section>
+  <section id="contributors" class="contributors-section">
+    <h2>Meet Our Contributors</h2>
+    <div class="contributors-container">
+        <div class="contributor-item">
+            <img src="Images/gear.png" alt="Contributor 1">
+            <h3>John Aycocho</h3>
+            <p>Lead Developer</p>
+        </div>
+        <div class="contributor-item">
+            <img src="Images/gear.png" alt="Contributor 2">
+            <h3>--</h3>
+            <p>UI/UX Designer</p>
+        </div>
+        <div class="contributor-item">
+            <img src="Images/gear.png" alt="Contributor 3">
+            <h3>--</h3>
+            <p>Project Manager</p>
+        </div>
+    </div>
+</section>
+</main>
+<footer>
+  <p>2024 Date Time Record.</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    function initCarousels() {
+            if (window.innerWidth < 600) {
+                if (!$('.offers-container').hasClass('slick-initialized')) {
+                    $('.offers-container').slick({
+                        dots: true,
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '20px',
+                        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                        nextArrow: '<button type="button" class="slick-next">Next</button>',
+                    });
+                }
+
+                if (!$('.contributors-container').hasClass('slick-initialized')) {
+                    $('.contributors-container').slick({
+                        dots: true,
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '20px',
+                        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                        nextArrow: '<button type="button" class="slick-next">Next</button>',
+                    });
+                }
+            } else {
+                if ($('.offers-container').hasClass('slick-initialized')) {
+                    $('.offers-container').slick('unslick');
+                }
+                if ($('.contributors-container').hasClass('slick-initialized')) {
+                    $('.contributors-container').slick('unslick');
+                }
+            }
+        }
+
+        $(document).ready(function() {
+            initCarousels();
+            $(window).resize(function() {
+                initCarousels();
+            });
+        });
+</script>
+  <script type="module" src="js/login.js"></script>
+  <script src="js/script.js"></script>
+ 
+  <script type="text/javascript">
+    on_index = true;
+</script>
+</body>
+
+</html>

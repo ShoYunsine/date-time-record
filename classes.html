@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="css/classes.css">
+  <link rel="stylesheet" type="text/css" href="css/login-signup-style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
+  <link rel="shortcut icon" href="Images/logo.png">
+  <link rel="icon" type="image/png" href="Images/logo.png" />
+  <title>Daily-Time-Record | Classes</title>
+</head>
+
+<body>
+  <div id="logincontainer">
+    <div class="form-container sign-up-container">
+      <form id="loginForm">
+        <h1>Login</h1>
+        <input type="text" id="loginEmail" placeholder="Email or Number" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <div>Don't have one? <a id="signUpButton" href="#">Create one</a></div>
+        <button type="submit" id="loginsubmit">Continue</button>
+        <div>or</div>
+        <button type="button" id="loginWithGoogle"><img src="Images/google-logo.png"></img> Continue with
+          Google</button>
+      </form>
+    </div>
+  </div>
+  <div id="signUpcontainer">
+    <div class="form-container sign-up-container">
+      <form id="signUpForm">
+        <h1>Sign Up</h1>
+        <input type="text" id="signUpEmail" placeholder="Email or Number" required>
+        <input type="password" id="signUpPassword" placeholder="Password" required>
+        <input type="password" id="signUpPasswordConfirm" placeholder="Confirm Password" required>
+        <div id="warning"><img src="Images/orange-warning-icon.png"></img><a id="warningtxt">Passwords do not match</a>
+        </div>
+        <div>Already have one? <a id="loginButton2" href="#">Login</a></div>
+        <button id="submitsignUp" type="submit">Sign Up</button>
+        <div>or</div>
+        <button type="button" id="signUpWithGoogle"><img src="Images/google-logo.png"></img> Continue with
+          Google</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="top-bar">
+    <div class="logo">
+      <a>DTR</a><img src="Images/logo.png"><a>Classes</a></img>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a id="account">Account</a>
+    </div>
+  </div>
+  <div id="accountDetails">
+    <div id="bg"><img id="accountImg" src="Images/gear.png"></img></div>
+    <div id="accountName">Not currently logged in</div>
+    <div id="accountEmail">·</div>
+    <a id="dashboard" href="dashboard.html">Dashboard</a>
+    <button id="loginButton">Login</button>
+    <button id="signOutButton">Sign Out</button>
+  </div>
+  <button style="display: none" id="toggleScanner">Show QR Scanner</button>
+  <div id="qrscanner-container">
+    <video id="camera" autoplay></video>
+  </div>
+  <div class="main-container">
+    <div class="form-section">
+        <h2>Create a New Class</h2>
+        <form id="classaddForm">
+          <div>
+          <h3 for="className">Class Name</h3>
+            <input type="text" id="className" name="className" required placeholder="Class Name"> 
+            </div>
+            <div>
+            <h3 for="school-name">School</h3>
+            <select id="school-name">
+              <option value="None">None</option>
+              <option value="Sorsogon State University, Main Campus">Sorsogon State University, Main Campus
+              </option>
+            </select>
+            </div>
+            <button type="submit" class="submit-btn">Add Class</button>
+        </form>
+    </div>
+    <div class="form-section">
+      <h2>Join a Class</h2>
+      <form id="classjoinForm">
+        <div>
+        <h3 for="classCode">Class Code</h3>
+          <input type="text" id="classCode" name="classCode" required placeholder="Code"> 
+          </div>
+          <button type="submit" class="submit-btn">Join Class</button>
+      </form>
+  </div>
+    <div class="list-section">
+        <h2>Class List</h2>
+        <ul id="classList">
+            <!-- Classes will be added here -->
+        </ul>
+    </div>
+</div>
+
+  <script type="module" src="js/login.js"></script>
+  <script type="module" src="js/classes.js"></script>
+  <script type="text/javascript">
+    on_classes = true;
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

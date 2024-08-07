@@ -1,0 +1,344 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fcfcfc;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for webkit-based browsers */
+}
+
+#account {
+  display: none;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  align-items: center;
+  background-color: maroon;
+  padding: 10px 0px 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.top-bar .logo {
+  color: #ffffff;
+  position: absolute;
+  padding: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar .logo img {
+  width: 35px;
+}
+
+.top-bar .logo a {
+  text-shadow: 0 0 3px #000000;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 150%;
+  width: 100%;
+  font-weight: bold;
+}
+
+.top-bar .nav-links {
+  display: flex;
+}
+
+.top-bar .nav-links a {
+  transition: all 0.2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  font-size: 12px;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
+}
+
+.top-bar .nav-links a:hover {
+  background-color: maroon;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  color: rgb(255, 255, 255);
+  transform: translate(0%, 20%);
+}
+
+#accountDetails {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: fixed;
+  top: 62px;
+  background-color: #ffffff;
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  height: calc(100% - 82px);
+  overflow: hidden;
+  z-index: 1;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgb(255, 255, 255),rgb(231, 231, 231));
+}
+
+#accountDetails #bg {
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  border-radius: 0 0 0 90%;
+  background-image: linear-gradient(45deg, rgb(243, 243, 243), rgb(255, 255, 255));
+  background-repeat: no-repeat;
+  filter: blur(0.1px);
+  background-size: cover;
+  height: 250px;
+  justify-content: center; /* Center background content horizontally */
+  align-items: center; /* Center background content vertically */
+  width: 100%;
+}
+
+#accountDetails img {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  filter: blur(0px);
+  /*transform: translate(0%, 130%);*/
+  width: 100px;
+  margin-left: 30%;
+  margin-top: 130px;
+  border-radius: 100%;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+}
+
+#accountName {
+  text-align: center;
+  justify-self: center;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+}
+#accountEmail {
+  text-align: center;
+  justify-self: center;
+  font-size: 10px;
+  margin: 1px;
+  color: rgb(255, 255, 255);
+}
+
+#loginButton, #signOutButton {
+  display: none;
+  align-self: center;
+  border-radius: 50px;
+  width: 80%;
+  border: none;
+  padding: 9px;
+  background: #ffffff00;
+  color: #000000;
+  border-color: #ffffff;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 14px;
+  cursor: pointer;
+  transform: translate(0%, 0%);
+  transition: all 0.3s ease;
+  margin: 10px;
+  color: #ffffff;
+  margin-top: auto;
+}
+
+#dashboard {
+  display: none;
+  align-self: center;
+  text-align: center;
+  border-radius: 50px;
+  width: 50%;
+  margin: 10px;
+  border: none;
+  padding: 9px;
+  background: #ffffff00;
+  color: #000000;
+  border-color: #ffffff;
+  border-width: 2px;
+  border-style: solid;
+  font-size: 12px;
+  cursor: pointer;
+  transform: translate(0%, 0%);
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+#loginButton:hover {
+  background: #a1a0a07c;
+  color: white;
+}
+
+#signOutButton:hover {
+  background: #a1a0a07c;
+  color: white;
+}
+
+.container {
+  width: 78%;
+  margin: 10px;
+  height: calc(100% - 102px);
+  z-index: 20;
+  transition: right 0.3s ease-in-out;
+  margin-left: 270px;
+  margin-top: 82px;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#tabs {
+  display: flex;
+  height: auto;
+  width: 79%;
+  margin-bottom: 0;
+}
+
+#tabs a {
+  padding: 5px;
+  font-size: 11px;
+  width: 100px;
+  height: 100%;
+  background-color: #fcfcfc;
+  box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 10px 0 0;
+  color: #000000;
+  text-align: center;
+  line-height: 25px;
+  margin-right: 5px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  position: relative; /* Necessary for pseudo-elements */
+  z-index: 1; /* Default z-index for all tabs */
+}
+
+#tabs a:nth-child(1) {
+  z-index: 3; /* Highest z-index for the first tab */
+}
+
+#tabs a:nth-child(2) {
+  z-index: 2; /* Lower z-index for the second tab */
+  margin-left: -30px;
+}
+
+#tabs a:nth-child(3) {
+  z-index: 1; /* Lower z-index for the third tab */
+  margin-left: -30px;
+}
+
+#tabs a:not(:first-child):hover {
+  margin-left: -10px;
+}
+
+#tabs a:hover {
+  color: #0990ff;
+}
+
+#tabs a.active:first-child {
+  color: #0990ff; /* Active tab color */
+  z-index: 5;
+  pointer-events: none;
+}
+
+#tabs a.active:not(:first-child) {
+  color: #0990ff; /* Active tab color */
+  margin-left: -10px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+#tabs-content {
+  background-color: #fcfcfc;
+  height: 100%;
+  padding: 10px; /* Padding for content area */
+  z-index: 4;
+  margin-top: 10px;
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  overflow-y: auto; /* Scroll if content overflows */
+  border-radius: 0 10px 10px 10px;
+}
+
+#tabs-content .tab-content {
+  display: none; /* Hide all tab content by default */
+}
+
+#tabs-content .tab-content.active {
+  display: block; /* Show the active tab content */
+}
+
+#school-select {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .top-bar {
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .top-bar .nav-links {
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+  }
+
+  .top-bar .nav-links a {
+    text-align: center;
+    padding: 10px;
+    width: 25%;
+    margin: 0;
+  }
+
+  .top-bar .logo {
+    position: static;
+  }
+
+  .top-bar .logo a {
+    position: static;
+    font-size: 25px;
+  }
+
+  #accountDetails {
+    width: 100%;
+    top: 105px;
+    height: 325px;
+    position: relative;
+    margin: 0;
+  }
+
+  .container {
+    margin: auto;
+    margin-top: 130px;
+    margin-left: 0;
+    align-self: center;
+    width: 94.5%;
+    height: auto;
+  }
+
+  #tabs-content {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #accountDetails img {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    filter: blur(0px);
+    /*transform: translate(0%, 130%);*/
+    width: 100px;
+    margin-left: 36%;
+    margin-top: 140px;
+    border-radius: 100%;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+  }
+}

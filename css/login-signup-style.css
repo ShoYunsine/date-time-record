@@ -1,0 +1,143 @@
+
+#logincontainer {
+  display: none;
+  position: fixed; /* Fixed position */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  background: #fcfcfc;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 40px;
+  width: 270px;
+  height: auto;
+  max-width: 70%; /* Limit maximum width */
+  z-index: 1000; /* Ensure it's above other content except the top bar */
+}
+
+#signUpcontainer {
+  display: none;
+  position: fixed; /* Fixed position */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  background: #fcfcfc;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  padding: 40px;
+  width: 270px;
+  height: auto;
+  max-width: 70%; /* Limit maximum width */
+  z-index: 1000; /* Ensure it's above other content except the top bar */
+}
+
+.form-container {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  padding: 0 20px; /* Add padding to the sides */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+  
+}
+
+.form-container a, .form-container div{
+  align-self: center;
+  margin: 5px;
+  font-size: 14px;
+  color: #91908f;
+}
+
+.form-container a{
+  align-self: center;
+  margin: 5px;
+  font-size: 14px;
+  color: #00c3ff;
+}
+
+#warning {
+  display: none;
+  width: 100%;
+  align-items: center;
+}
+
+#warningtxt {
+  color: #91908f;
+  text-align: center;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure the form takes the full width */
+}
+
+h1 {
+  font-weight: bold;
+  margin: 0 0 20px;
+  text-align: left;
+}
+
+input {
+  background: #eee;
+  border: none;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border-color: #d3d3d3;
+  border-width: 2px;
+  border-style: solid;
+  width: 100%; /* Ensure inputs take the full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.form-container img {
+  transform: translate(-50%, 10%);
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: white;
+}
+
+
+.form-container button {
+  align-self: center;
+  border-radius: 50px;
+  width: 90%;
+  margin: 2px;
+  border: none;
+  padding: 9px;
+  background: #91908f;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#signUpWithGoogle, #loginWithGoogle  {
+  background-color: rgb(85, 189, 253);
+}
+
+#signUpWithGoogle:hover {
+  background-color: rgb(36, 160, 238);
+}
+
+#loginWithGoogle:hover {
+  background-color: rgb(36, 160, 238);
+}
+
+
+.form-container button:hover {
+  background: grey;
+}
+
+.form-container button img {
+  transform: translate(-50%, 10%);
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: white;
+}
+

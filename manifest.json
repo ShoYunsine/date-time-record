@@ -1,0 +1,17 @@
+{
+    "lang": "en-us",
+    "name": "Date Time Record",
+    "short_name": "Date Time Record",
+    "description": "Track your attendance",
+    "start_url": "/",
+    "background_color": "#000001",
+    "theme_color": "#000001",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "Images/logo.png",
+            "sizes": "512x512"
+        }
+    ]
+}
