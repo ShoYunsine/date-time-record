@@ -9,7 +9,8 @@ import {
     signOut,
     setPersistence,
     browserSessionPersistence,
-    inMemoryPersistence
+    inMemoryPersistence,
+    browserLocalPersistence
 } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-analytics.js";
 import {
@@ -43,7 +44,7 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 let currentUser;
 
-setPersistence(auth, browserSessionPersistence)
+setPersistence(auth, browserLocalPersistence)
     .then(() => {
         // In memory persistence will be applied to the signed in Google user
         // even though the persistence was set to 'none' and a page redirect
