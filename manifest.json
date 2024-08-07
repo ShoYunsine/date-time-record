@@ -3,7 +3,7 @@
     "name": "Date Time Record",
     "short_name": "Date Time Record",
     "description": "Track your attendance",
-    "start_url": "/",
+    "start_url": "https://shoyunsine.github.io/dtr/",
     "background_color": "#000001",
     "theme_color": "#000001",
     "orientation": "any",
