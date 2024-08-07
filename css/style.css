@@ -174,7 +174,7 @@ main #home {
   /* Adjust this value if needed to ensure the content is not hidden behind the nav bar */
   text-align: left;
   width: auto;
-  background-image: url("../Images/bghome.jpg");
+  background-image: url("../Images/bgsite.png");
   /* Replace with your image path */
   background-size: cover;
   background-position: center;
