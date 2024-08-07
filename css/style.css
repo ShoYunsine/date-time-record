@@ -174,7 +174,7 @@ main #home {
   /* Adjust this value if needed to ensure the content is not hidden behind the nav bar */
   text-align: left;
   width: auto;
-  background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fsorsu.edu.ph%2Fsorsu-college-of-technology-about%2F&psig=AOvVaw1ytQ6KND-GFBHCWKoow5pL&ust=1723099074671000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNj1zrOi4ocDFQAAAAAdAAAAABAE");
+  background-image: url("././Images/bgsite.png");
   /* Replace with your image path */
   background-size: cover;
   background-position: center;
