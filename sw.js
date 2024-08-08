@@ -22,7 +22,8 @@ self.addEventListener('install', event => {
         '/css/login-signup-style.css',
         '/css/calendar.css',
         '/js/login.js',
-        '/Images/logo.png']);
+        '/Images/logo.png'
+      ]);
     })()
   );
 });
