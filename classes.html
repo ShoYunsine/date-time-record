@@ -70,41 +70,61 @@
     <video id="camera" autoplay></video>
   </div>
   <div class="main-container">
+    <div class="list-section">
+      <h2>Class List</h2>
+      <ul id="classList">
+        <!-- Classes will be added here -->
+      </ul>
+    </div>
     <div class="form-section">
-        <h2>Create a New Class</h2>
-        <form id="classaddForm">
+      <h2>Create a New Class</h2>
+      <form id="classaddForm">
+        <div class="form-group">
           <div>
-          <h3 for="className">Class Name</h3>
-            <input type="text" id="className" name="className" required placeholder="Class Name"> 
-            </div>
-            <div>
-            <h3 for="school-name">School</h3>
-            <select id="school-name">
-              <option value="None">None</option>
-              <option value="Sorsogon State University, Main Campus">Sorsogon State University, Main Campus
-              </option>
-            </select>
-            </div>
-            <button type="submit" class="submit-btn">Add Class</button>
-        </form>
+            <h3 for="className">Class Name</h3>
+            <input type="text" id="className" name="className" required placeholder="Class Name">
+          </div>
+          <div>
+            <h3 for="timeIn">Time In</h3>
+            <input type="time" id="timeIn" name="timeIn" required>
+          </div>
+          <div>
+            <h3 for="timeOut">Time Out</h3>
+            <input type="time" id="timeOut" name="timeOut" required>
+          </div>
+        </div>
+        <div>
+          <h3 for="school-name">School</h3>
+          <select id="school-name">
+            <option value="None">None</option>
+            <option value="Sorsogon State University, Main Campus">Sorsogon State University, Main Campus
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div>
+            <h3 for="coordinates">Coordinates</h3>
+            <input type="number" id="coordinates" name="coordinates" required placeholder="Latitude, Longitude">
+          </div>
+          <div>
+            <h3 for="radius">Radius</h3>
+            <input type="number" id="radius" name="radius" required placeholder="Radius (Meters)">
+          </div>
+        </div>
+        <button type="submit" class="submit-btn">Add Class</button>
+      </form>
     </div>
     <div class="form-section">
       <h2>Join a Class</h2>
       <form id="classjoinForm">
         <div>
-        <h3 for="classCode">Class Code</h3>
-          <input type="text" id="classCode" name="classCode" required placeholder="Code"> 
-          </div>
-          <button type="submit" class="submit-btn">Join Class</button>
+          <h3 for="classCode">Class Code</h3>
+          <input type="text" id="classCode" name="classCode" required placeholder="Code">
+        </div>
+        <button type="submit" class="submit-btn">Join Class</button>
       </form>
-  </div>
-    <div class="list-section">
-        <h2>Class List</h2>
-        <ul id="classList">
-            <!-- Classes will be added here -->
-        </ul>
     </div>
-</div>
+  </div>
 
   <script type="module" src="js/login.js"></script>
   <script type="module" src="js/classes.js"></script>
