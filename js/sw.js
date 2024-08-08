@@ -22,8 +22,7 @@ self.addEventListener('install', event => {
         './css/login-signup-style.css',
         './css/calendar.css',
         './js/login.js',
-        './Images/logo.png',
-        '/offline.html'
+        './Images/logo.png'
       ]);
     })()
   );
@@ -35,7 +34,6 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       (async () => {
         const cache = await caches.open(CACHE_NAME);
-        return caches.match('/offline.html');
         // Check the cache for the requested resource
         const cachedResponse = await cache.match(event.request);
         if (cachedResponse) {
