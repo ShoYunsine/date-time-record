@@ -243,6 +243,20 @@ a:active {
   padding: 20px;
 }
 
+.form-group {
+  display: flex;
+  gap: 15px; /* Space between input fields */
+  flex-wrap: wrap;
+}
+
+.form-step {
+  display: none; /* Hide all steps initially */
+}
+
+.form-step.active {
+  display: block; /* Show the active step */
+}
+
 .form-section,
 .list-section {
   padding: 10px;
@@ -251,7 +265,7 @@ a:active {
   border: 1px solid #ccc;
 }
 
-.form-section h3 {
+.form-section h3, .form-group h3 {
   position: absolute;
   text-align: left;
   transform: translate(-10%, -20%);
@@ -283,7 +297,7 @@ a:active {
 	z-index: 1;
 }
 
-.form-section input,
+.form-section input, .form-group input,
 .form-section #school-name{
   width: 100%;
   padding: 12px 8px;
@@ -291,6 +305,7 @@ a:active {
   border: 1px solid #ddd;
   border-radius: 4px;
   margin-top: 20px;
+  height: 50px;
   font-size: 16px;
 }
 
@@ -305,6 +320,7 @@ a:active {
 
 .form-section select {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .list-section ul {
@@ -357,7 +373,7 @@ a:active {
   background-color: rgb(133, 27, 27);
 }
 
-.submit-btn {
+.submit-btn, .next-btn, .prev-btn {
   border: 1px solid #ddd;
   background-color: rgba(128, 0, 0, 0);
   color: rgb(0, 0, 0);
@@ -368,11 +384,11 @@ a:active {
   transition: background-color 0.3s, transform 0.2s;
   margin-top: 10px;
 }
-.submit-btn:hover {
+.submit-btn:hover, .next-btn:hover, .prev-btn:hover {
   background-color: rgb(168, 168, 168);
   color: white;
 }
-.submit-btn:active {
+.submit-btn:active, .next-btn:active, .prev-btn:active {
   transform: scale(0.98);
 }
 
