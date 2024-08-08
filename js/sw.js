@@ -6,23 +6,23 @@ self.addEventListener('install', event => {
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       await cache.addAll([
-        '/', 
-        '/index.html', 
-        '/css/style.css', 
-        '/js/script.js', 
-        '/classes.html', 
-        '/css/classes.css',
-        '/js/classes.js',
-        '/class.html',
-        '/css/class.css',
-        '/js/class.js',
-        '/dashboard.html',
-        '/css/dashboard.css',
-        '/js/dashboard.js',
-        '/css/login-signup-style.css',
-        '/css/calendar.css',
-        '/js/login.js',
-        '/Images/logo.png'
+        './', 
+        './index.html', 
+        './css/style.css', 
+        './js/script.js', 
+        './classes.html', 
+        './css/classes.css',
+        './js/classes.js',
+        './class.html',
+        './css/class.css',
+        './js/class.js',
+        './dashboard.html',
+        './css/dashboard.css',
+        './js/dashboard.js',
+        './css/login-signup-style.css',
+        './css/calendar.css',
+        './js/login.js',
+        './Images/logo.png'
       ]);
     })()
   );
