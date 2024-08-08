@@ -1,25 +1,11 @@
-const CACHE_NAME = 'dtr-v1.1';
+const CACHE_NAME = 'dtr-v1.2';
 
 // Use the install event to pre-cache all initial resources.
 self.addEventListener('install', event => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
-      await cache.addAll([
-        '/',
-        '/index.html',
-        '/css/style.css',
-        '/js/script.js',
-        '/classes.html',
-        '/css/classes.css',
-        '/js/classes.js',
-        '/dashboard.html',
-        '/css/dashboard.css',
-        '/js/dashboard.js',
-        '/css/login-signup-style.css',
-        '/css/calendar.css',
-        '/js/login.js'
-      ]);
+      //await cache.addAll(['/', '/index.html', '/css/style.css', '/js/script.js', '/classes.html', '/css/classes.css','/js/classes.js','/class.html','/css/class.css','/js/class.js','/dashboard.html','/css/dashboard.css','/js/dashboard.js','/css/login-signup-style.css','/css/calendar.css','/js/login.js','/Images/logo.png']);
     })()
   );
 });
