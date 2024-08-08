@@ -101,15 +101,17 @@
             </option>
           </select>
         </div>
-        <div class="form-group">
-          <div>
-            <h3 for="coordinates">Coordinates</h3>
-            <input type="text" id="coordinates" name="coordinates" required placeholder="Latitude, Longitude">
-          </div>
-          <div>
-            <h3 for="radius">Radius</h3>
-            <input type="number" id="radius" name="radius" required placeholder="Radius (Meters)">
-          </div>
+        <div>
+          <h3 for="coordinates">Latitude</h3>
+          <input type="number" id="lat" name="coordinates" required placeholder="Latitude">
+        </div>
+        <div>
+          <h3 for="coordinates">Longitude</h3>
+          <input type="number" id="long" name="coordinates" required placeholder="Longitude">
+        </div>
+        <div>
+          <h3 for="radius">Radius</h3>
+          <input type="number" id="radius" name="radius" required placeholder="Radius (Meters)">
         </div>
         <button type="submit" class="submit-btn">Add Class</button>
       </form>
